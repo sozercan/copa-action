@@ -28,3 +28,7 @@ else
     echo "Error patching image $image with copa"
     exit 1
 fi
+
+# echo $output
+
+# cat ./data/output.json
