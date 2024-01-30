@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+set -euo pipefail
 
 image=$1
 report=$2
@@ -6,7 +8,6 @@ patched_tag=$3
 timeout=$4
 output_file=$5
 format=$6
-
 
 # parse image into image name
 image_no_tag=$(echo "$image" | cut -d':' -f1)

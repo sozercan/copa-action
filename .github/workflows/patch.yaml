@@ -51,7 +51,7 @@ jobs:
         # use a tag (such as v1 or v1.0.1) at a bare minimum
         # recommendation is to pin to a digest for security and stability
         # and rely on dependabot for digest/version updates
-        uses: project-copacetic/copa-action@main
+        uses: sozercan/copa-action@strict-bash
         with:
           image: ${{ matrix.images }}
           image-report: "report.json"

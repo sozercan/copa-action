@@ -3,10 +3,10 @@ FROM debian:12-slim
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Get copa_version arg
-ARG copa_version
+ARG copa_version=0.6.0
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh 
+COPY entrypoint.sh /entrypoint.sh
 
 # Install required packages
 RUN apt-get update && \
