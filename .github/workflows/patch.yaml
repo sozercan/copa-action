@@ -51,7 +51,7 @@ jobs:
         # use a tag (such as v1 or v1.0.1) at a bare minimum
         # recommendation is to pin to a digest for security and stability
         # and rely on dependabot for digest/version updates
-        uses: sozercan/copa-action@feature/add-vuln-output
+        uses: sozercan/copa-action@out-vex
         with:
           image: ${{ matrix.images }}
           image-report: "report.json"
@@ -61,9 +61,9 @@ jobs:
           # copa-version: "0.6.0" # optional, default is latest
 
       - run: |
-          # cat data/test.json
           ls -al
-          sudo cat test.json
+          cat test.json
+          # sudo cat test.json
 
         # see https://github.com/docker/login-action#usage for other registries
       - name: Login to GHCR

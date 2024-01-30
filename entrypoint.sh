@@ -12,10 +12,8 @@ format=$6
 image_no_tag=$(echo "$image" | cut -d':' -f1)
 
 # check if output_file has been set
-if [ -z "$output_file" ]
+if [ ! -z "$output_file" ]
 then
-    output=""
-else
     output="--format $format --output ./data/"$output_file""
 fi
 
@@ -29,7 +27,8 @@ else
     exit 1
 fi
 
-if [ -e "$output_file" ]
+if [ ! -z "$output_file" ]
 then
-    sudo chmod 444 ./data/"$output_file"
+    echo "chmod"
+    chmod 444 ./data/"$output_file"
 fi
