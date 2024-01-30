@@ -29,6 +29,7 @@ else
     exit 1
 fi
 
-# echo $output
-
-# cat ./data/output.json
+if [ -e "$output_file" ]
+then
+    sudo chmod 444 ./data/"$output_file"
+fi
